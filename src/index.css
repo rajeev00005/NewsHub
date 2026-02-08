@@ -1,0 +1,60 @@
+.navbar-sticky-z {
+  z-index: 1030;
+}
+.sticky-aside {
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+  z-index: 2;
+}
+
+@media (max-width: 991.98px) {
+  .sticky-aside {
+    position: static;
+    top: auto;
+  }
+}
+/* Color variables for consistent theming */
+:root {
+  --primary: #4b35dc;
+  --danger: #dc3545;
+}
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.nav-link {
+  transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4b35dc !important;        /* Red color (Bootstrap danger) */
+  background-color: #f2f4f7;        /* Slight dark gray background */
+  border-radius: 8px;
+}
+
+/* Optional: Remove default Bootstrap hover underline */
+.nav-link:hover {
+  text-decoration: none;
+}
+
+.aside-menu .list-group-item {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.aside-menu a {
+  color: #495057;
+}
+
+.aside-menu a:hover {
+  color: #007bff;
+  font-weight: 500;
+}

@@ -2,7 +2,8 @@
 <div align="center">
   <h1>📰 NewsHub</h1>
   <p><b>Modern React News Website (Vite + Bootstrap)</b></p>
-  <img src="./preview.png" alt="NewsHub UI Preview" width="700" />
+   <img width="1920" height="1506" alt="news-website" src="https://github.com/user-attachments/assets/91dc23cc-053b-4e1e-8d05-3c70c1f13118" />
+
 </div>
 
 ---
@@ -28,7 +29,8 @@ NewsHub is a modern, responsive news website built with React, Vite, and Bootstr
 
 ## 📸 UI Preview
 
-<img src="./preview.png" alt="NewsHub UI Screenshot" width="700" />
+<img width="1920" height="1506" alt="news-website" src="https://github.com/user-attachments/assets/fdd0bedd-81cb-4346-8f9c-c7b2c33437f0" />
+
 
 ---
 

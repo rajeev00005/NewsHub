@@ -24,9 +24,9 @@ const Category = () => {
     const fetchCategoryNews = async () => {
       try {
         setLoading(true);
-        const params = { };
+        const params = {};
         if (category === 'india') {
-          params.country = 'in';
+          params.category = 'world'; // GNews does not support 'india' as topic, use 'world' or remove for all
         } else {
           params.category = category;
         }

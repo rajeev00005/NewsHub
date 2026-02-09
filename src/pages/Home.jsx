@@ -51,10 +51,6 @@ const Home = () => {
           )}
 
           {error && <Alert variant="danger">{error}</Alert>}
-
-          <Row>
-            <ArticleList articles={articles} />
-          </Row>
         </Col>
 
         {/* Aside Menu (Sidebar) */}

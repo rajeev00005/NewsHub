@@ -10,7 +10,7 @@
 
 ## 🚀 Overview
 
-NewsHub is a modern, responsive news website built with React, Vite, and Bootstrap. It fetches the latest headlines and category-based news from the NewsAPI, providing a clean, accessible, and mobile-friendly user experience.
+NewsHub is a modern, responsive news website built with React, Vite, and Bootstrap. It fetches the latest headlines and category-based news from the GNews API, providing a clean, accessible, and mobile-friendly user experience.
 
 ---
 
@@ -23,7 +23,7 @@ NewsHub is a modern, responsive news website built with React, Vite, and Bootstr
 - 📰 **Skeleton loaders** for smooth loading experience
 - 📌 **Sticky navbar and sidebar** for easy navigation
 - ⚡ **Fast**: Powered by Vite and optimized React code
-- 🔒 **API key in .env** for security
+- 🔒 **API key is used directly in code for GNews API**
 
 ---
 
@@ -45,11 +45,8 @@ NewsHub is a modern, responsive news website built with React, Vite, and Bootstr
 	```bash
 	npm install
 	```
-3. **Add your NewsAPI key:**
-	- Create a `.env` file in the root:
-	  ```env
-	  VITE_NEWS_API_KEY=your_api_key_here
-	  ```
+3. **GNews API key is used directly in the code:**
+	- No need to create a `.env` file. The API key is set in `src/api/newsApi.jsx`.
 4. **Run the app locally:**
 	```bash
 	npm run dev
@@ -63,7 +60,7 @@ NewsHub is a modern, responsive news website built with React, Vite, and Bootstr
 
 ```
 src/
-  api/           # API logic (NewsAPI)
+	api/           # API logic (GNews API)
   components/    # Reusable UI components
   pages/         # Page components (Home, Category, Search, About, Contact)
   assets/        # Static assets

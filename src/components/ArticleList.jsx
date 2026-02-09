@@ -11,7 +11,7 @@ const ArticleList = ({ articles }) => {
         <Card.Img
           className="img-fluid"
           variant="top"
-          src={article.urlToImage || 'https://www.shutterstock.com/image-vector/breaking-news-poster-banner-graphic-600nw-2453959087.jpg'}
+          src={article.image || 'https://www.shutterstock.com/image-vector/breaking-news-poster-banner-graphic-600nw-2453959087.jpg'}
           alt={article.title || 'No image'}
           loading="lazy"
           onError={e => {

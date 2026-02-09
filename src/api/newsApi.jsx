@@ -1,31 +1,33 @@
+
 import axios from 'axios';
 
-const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
-const BASE_URL = 'https://newsapi.org/v2'; // ✅ No extra spaces
+const API_KEY = 'bcdef5c8cd1044e9ec05193abf4c74c1';
+const BASE_URL = 'https://gnews.io/api/v4';
 
 // Create an axios instance
 const api = axios.create({
   baseURL: BASE_URL,
-  headers: {
-    'X-Api-Key': API_KEY,
-  },
 });
+
 
 export const getTopHeadlines = (options = {}) => {
   const { category } = options;
   return api.get('/top-headlines', {
     params: {
       country: 'us',
-      pageSize: 6,
-      ...(category ? { category } : {}),
+      max: 6,
+      ...(category ? { topic: category } : {}),
+      token: API_KEY,
     },
   });
 };
 
-export const searchNews = (query) => api.get('/everything', {
+
+export const searchNews = (query) => api.get('/search', {
   params: {
     q: query,
-    pageSize: 6,
+    max: 6,
+    token: API_KEY,
   },
 });
 

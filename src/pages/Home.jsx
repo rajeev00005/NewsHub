@@ -29,12 +29,12 @@ const Home = () => {
   }, []);
 
   return (
-    <Container className="my-5">
+    <Container className="my-5 shadow-sm p-3 bg-light rounded">
       <Row>
         {/* Main Content */}
         <Col lg={8} xs={12}>
-          <h1 className="text-center mb-4">
-            Top <span className="badge bg-danger">Breaking News</span>
+          <h1 className="text-center mb-4 fw-bold text-secondary text-uppercase ">
+            Top <span className="badge bg-danger ">Breaking News</span>
           </h1>
 
 

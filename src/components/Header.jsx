@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="px-3 sticky-top navbar-sticky-z">
-      <Link to="/" className="navbar-brand">NewsHub</Link>
+      <Link to="/" className="navbar-brand text-white fw-bold text-uppercase fs-3">NewsHub</Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mx-auto">

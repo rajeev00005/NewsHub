@@ -1,7 +1,17 @@
-import React from 'react';
-import { Col, Card } from 'react-bootstrap';
+import React from "react";
+import { Col, Card } from "react-bootstrap";
 
 const ArticleList = ({ articles }) => {
+  const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+
+  const getCountryName = (code) => {
+    try {
+      return regionNames.of(code.toUpperCase());
+    } catch {
+      return "Unknown";
+    }
+  };
+
   if (!articles || articles.length === 0) {
     return <Col>No results found.</Col>;
   }
@@ -11,24 +21,40 @@ const ArticleList = ({ articles }) => {
         <Card.Img
           className="img-fluid"
           variant="top"
-          src={article.image || 'https://www.shutterstock.com/image-vector/breaking-news-poster-banner-graphic-600nw-2453959087.jpg'}
-          alt={article.title || 'No image'}
+          src={
+            article.image ||
+            "https://www.shutterstock.com/image-vector/breaking-news-poster-banner-graphic-600nw-2453959087.jpg"
+          }
+          alt={article.title || "No image"}
           loading="lazy"
-          onError={e => {
-            e.target.src = 'https://www.shutterstock.com/image-vector/breaking-news-poster-banner-graphic-600nw-2453959087.jpg';
+          onError={(e) => {
+            e.target.src =
+              "https://www.shutterstock.com/image-vector/breaking-news-poster-banner-graphic-600nw-2453959087.jpg";
           }}
         />
         <Card.Body className="d-flex flex-column justify-content-between h-100 ">
-          <Card.Title as="h5" style={{ fontSize: '1rem' }}>
+          <Card.Title as="h5" style={{ fontSize: "1rem" }}>
             {article.title && article.title.length > 50
               ? `${article.title.substring(0, 50)}...`
-              : article.title || 'Untitled'}
+              : article.title || "Untitled"}
           </Card.Title>
-          <Card.Text style={{ fontSize: '0.9rem' }}>
+          <Card.Text style={{ fontSize: "0.9rem" }}>
             {article.description
               ? `${article.description.substring(0, 80)}...`
-              : 'No description available.'}
+              : "No description available."}
           </Card.Text>
+          <div className="d-flex justify-content-between  mt-auto">
+          <Card.Text className="text-muted" style={{ fontSize: "0.8rem" }}>
+            {article.publishedAt
+              ? new Date(article.publishedAt).toLocaleDateString()
+              : "Unknown date"}
+          </Card.Text>
+          <Card.Text className="text-muted fw-normal" style={{ fontSize: "0.8rem" }}>
+            {article.source && article.source.country
+              ? ` ${getCountryName(article.source.country)}`
+              : "Unknown source"}
+          </Card.Text>
+          </div>
           <a
             href={article.url}
             target="_blank"

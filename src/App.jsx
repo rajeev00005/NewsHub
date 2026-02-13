@@ -13,7 +13,7 @@ function App() {
     <Router>
       {/* Skip to content link for accessibility */}
       {/* <a href="#main-content" className="visually-hidden focusable skip-link">Skip to main content</a> */}
-      <div className="d-flex flex-column min-vh-100 bg-dark text-white">
+      <div className="hero-bg bg-dark d-flex flex-column min-vh-100 text-white">
         <Header/>
         <main id="main-content" className="flex-grow-1">
           <Routes>

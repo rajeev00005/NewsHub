@@ -58,3 +58,18 @@
   color: #007bff;
   font-weight: 500;
 }
+
+.footer-bg {
+  background-image: url('/src/assets/footer-img.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.hero-bg{
+  background-image: url('/src/assets/footer-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}

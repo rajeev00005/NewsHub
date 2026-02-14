@@ -9,7 +9,7 @@ const categoryMap = {
   business: 'Business',
   entertainment: 'Entertainment',
   health: 'Health',
-  sports: 'Sports',
+  sports: 'Sport',
   technology: 'Technology',
   india: 'India',
 };
